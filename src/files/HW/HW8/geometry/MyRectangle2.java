@@ -1,13 +1,11 @@
-package ua.goit.java8.module8.geometry;
+package files.HW.HW8.geometry;
 
 import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
-/**
- * Created by t.oleksiv on 07/09/2017.
- */
+
 public class MyRectangle2 extends Rectangle{
     private Pane root;
     private double xStart;

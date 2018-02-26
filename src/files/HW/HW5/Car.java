@@ -12,7 +12,7 @@ public class Car {
     private int currentSpeed;       //текущая скорость
     private CarDoor[] cardoors = new CarDoor[MAX_DOORS];     //массив 4 двери
     private CarWheel[] carwheels = new CarWheel[MAX_WHEELS];      //массив 10 колёс
-    private int wheelCounter;       //поточна кількість коліс на машині
+    private int wheelCounter;       //текущее количесво колёс
     private static final int MAX_WHEELS = 10;     //максимальное кол-во колёс
     private static final int MAX_DOORS = 4;     //максимальное кол-во дверей
 

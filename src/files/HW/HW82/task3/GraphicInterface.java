@@ -1,5 +1,6 @@
-package ua.goit.java8.module82.task3;
+package files.HW.HW82.task3;
 
+import files.HW.HW82.utils.Images;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -9,16 +10,14 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import ua.goit.java8.module82.utils.Images;
+
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
-/**
- * Created by Taras on 16.09.2017.
- */
+
 
 public class GraphicInterface {
     private Stage primaryStage;
@@ -70,7 +69,7 @@ public class GraphicInterface {
 
     }
 
-    // завантажуєм кожну картинку окремим потоком
+
     private void drawImages(ArrayList<URL> urls) throws IOException {
         int n = 0;
         for (int i = 0; i < 5; i++){
@@ -98,7 +97,7 @@ public class GraphicInterface {
         ArrayList<URL> imageUrls = new ArrayList<>(imageLinks.size());
         for (int i = 0; i < imageLinks.size(); i++){
             imageUrls.add(new URL(imageLinks.get(i)));
-            //System.out.println(i + " " + imageUrls.get(i));
+
         }
         return imageUrls;
     }

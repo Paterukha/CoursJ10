@@ -1,10 +1,8 @@
-package ua.goit.java8.module82.utils;
+package files.HW.HW82.utils;
 
 import java.io.*;
 
-/**
- * Created by Taras on 17.09.2017.
- */
+
 public class FileUtils {
 
     public String readTextFromFile(String filePath, String textCoding){
@@ -14,12 +12,12 @@ public class FileUtils {
                 InputStreamReader inputStreamReader =
                         new InputStreamReader(myFile, textCoding);
                 Reader reader = new BufferedReader(inputStreamReader);){
-            int ch; // the code of one character
+            int ch;
             while ((ch = reader.read()) > -1) {
                 buffer.append((char)ch);
             }
         } catch (IOException e) {
-            //e.printStackTrace();
+
             System.out.println("Unable to read from file " + filePath);
         }
 

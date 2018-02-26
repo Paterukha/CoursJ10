@@ -1,13 +1,13 @@
-package ua.goit.java8.module82.utils;
+package files.HW.HW82.utils;
 
-import ua.goit.java8.module82.task2.Main;
+
+
+import files.HW.HW82.task2.Main;
 
 import java.util.concurrent.*;
 
 
-/**
- * Created by Taras on 15.09.2017.
- */
+
 public class SeriesRun extends Thread {
     private int[] array;
     private int mainId;
@@ -16,7 +16,7 @@ public class SeriesRun extends Thread {
     private static long durationThreads = 0;
     private static int currentMax = 1;
 
-    // 3 конструктори
+
     public SeriesRun(){}
 
     public SeriesRun(int countThreads, int[] array){
@@ -31,9 +31,9 @@ public class SeriesRun extends Thread {
         this.array = array;
         this.countThreads = countThreads;
     }
-    // кінець конструкторів
 
-    // метод для створення масиву потоків
+
+
     private void work(int countThreads, int[] array){
         durationThreads = 0;
         Object waitObject = new Object();
@@ -43,9 +43,9 @@ public class SeriesRun extends Thread {
         }
     }
 
-    // забезпечуєм виконання потоків у строгій послідовності один за одним
+
     public void run(){
-        //System.out.println("Start run of thread: " + mainId);
+
         synchronized (waitObject){
             while (mainId > currentMax){
                 try {
@@ -61,22 +61,20 @@ public class SeriesRun extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            //System.out.println("Finish thread: " + mainId);
+
             waitObject.notifyAll();
         }
     }
 
-    // розпаралелюєм підрахунок суми на потоки в залежності від кількості ядер
-    // цей метод використовується як для 1-го способу Thread так і для другого способу ThreadPool
+
     private double calculateSum(int[] array, int mainId, boolean isThreadPool) throws InterruptedException {
         System.out.println();
         System.out.println("********************* Thread # " + mainId + " ***************************");
         System.out.println("Calculating sum of sin(x) + cos(x) for the whole array ...");
         long startTime = System.currentTimeMillis();
         int coreCount = Runtime.getRuntime().availableProcessors();
-        //System.out.println("Count of cores: " + coreCount);
 
-        // викликаєм метод підрахунку суми через розпаралелені потоки
+
         Arrays arraysMultiple = new Arrays();
         double sum = arraysMultiple.getMultipleThreadsSum(array,coreCount);
         long duration = System.currentTimeMillis() - startTime;
@@ -95,7 +93,7 @@ public class SeriesRun extends Thread {
         return sum;
     }
 
-    // метод для запуску ThreadPool
+
     public void getThreadPool(int n, int[] array){
         durationThreads = 0;
         countThreads = n;

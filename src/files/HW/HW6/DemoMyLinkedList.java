@@ -1,10 +1,8 @@
-package ua.goit.java8.module6;
+package files.HW.HW6;
 
-import ua.goit.java8.module6.collections.MyLinkedList;
 
-/**
- * Created by t.oleksiv on 18/08/2017.
- */
+import files.HW.HW6.collections.MyLinkedList;
+
 public class DemoMyLinkedList {
     private MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
 

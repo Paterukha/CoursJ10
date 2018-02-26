@@ -1,10 +1,8 @@
-package ua.goit.java8.module82.task1;
+package files.HW.HW82.task1;
 
 import java.util.concurrent.Callable;
 
-/**
- * Created by t.oleksiv on 14/09/2017.
- */
+
 public class OperationBoolean implements Callable<Boolean> {
     private String operation;
     private double a;
@@ -30,7 +28,7 @@ public class OperationBoolean implements Callable<Boolean> {
                 break;
             default:
                 result = false;
-                System.out.println("Введено недопустимий символ операції: " + operation);
+                System.out.println("Введён недопустимый символ операции: " + operation);
                 break;
         }
         return result;

@@ -1,20 +1,19 @@
-package ua.goit.java8.module8.geometry;
+package files.HW.HW8.geometry;
 
+import files.HW.HW8.TaskGeometry2;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import ua.goit.java8.module8.TaskGeometry2;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by t.oleksiv on 07/09/2017.
- */
+
 public class Geometry2 {
     private Pane root = new Pane();
     private Random random = new Random();
@@ -52,10 +51,10 @@ public class Geometry2 {
             Thread thread = new Thread(()->{
                 int count = 0;
 
-                // лічильник потоку налаштований так, щоб потік завершив роботу через 40 секунд
+
                 while(count < 400) {
 
-                    //for (int i = indexLeft; i < indexRight; i++){
+
                     for (int i = 0; i < indexRight; i++){
 
                         final double x = myRectangles2.get(i).getTranslateX();
@@ -95,7 +94,7 @@ public class Geometry2 {
         });
     }
 
-    // перевірка чи прямокутник досягнув межі сцени
+
     private void checkType(MyRectangle2 myRectangle2){
         if (myRectangle2.getxStart()+myRectangle2.getTranslateX()+myRectangle2.getWidth() + 20 >= TaskGeometry2.WIDTH || myRectangle2.getxStart()+myRectangle2.getTranslateX() <= 0){
             myRectangle2.setTypeX(!myRectangle2.getTypeX());
@@ -108,11 +107,11 @@ public class Geometry2 {
 
     private void drawRectangles(){
 
-        // кількість прямокутників рендомна від 3 до 10
+
         int count = random.nextInt(8) + 3;
         MyRectangle[] myRectangles = new MyRectangle[count];
         for (MyRectangle myRectangle: myRectangles){
-            // малюєм прямокутник
+
             drawRectangle();
         }
     }
@@ -127,19 +126,19 @@ public class Geometry2 {
         boolean typeX = (typeXint == 1);
         boolean typeY = (typeYint == 1);
 
-        // запуск потоку нового прямокутника
+
         new Thread(new MyRectangle(root,x,y,width,height,getColor(),typeX,typeY)).start();
     }
 
     private void drawRectangles2(){
 
-        // кількість прямокутників рендомна від 3 до 10
+
         int count = random.nextInt(8) + 3;
         indexLeft = indexRight;
         indexRight = indexLeft + count;
 
         for (int i = indexLeft; i < indexRight; i++){
-            // малюєм прямокутник
+
             myRectangles2.add(drawRectangle2());
         }
     }
@@ -154,7 +153,7 @@ public class Geometry2 {
         boolean typeX = (typeXint == 1);
         boolean typeY = (typeYint == 1);
 
-        // створюєм новий прямокутник
+
         return new MyRectangle2(root,x,y,width,height,getColor(),typeX,typeY);
     }
 

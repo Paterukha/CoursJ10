@@ -1,8 +1,6 @@
-package ua.goit.java8.module6;
+package files.HW.HW6;
 
-/**
- * Created by t.oleksiv on 18/08/2017.
- */
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("_____________________________");

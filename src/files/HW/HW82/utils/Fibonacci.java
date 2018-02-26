@@ -1,13 +1,8 @@
-package ua.goit.java8.module82.utils;
+package files.HW.HW82.utils;
 
 import java.math.BigInteger;
 
-/**
- * Created by t.oleksiv on 18/09/2017.
- */
 
-// відлік чисел Фібоначчі починаємо з 0;
-// нумерацію членів послідовності Фібоначчі теж починаємо з 0
 
 public class Fibonacci {
 

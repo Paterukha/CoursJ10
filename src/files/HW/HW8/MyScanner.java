@@ -1,20 +1,18 @@
-package ua.goit.java8.module8;
+package files.HW.HW8;
 
 import java.util.Scanner;
 
-/**
- * Created by Taras on 06.09.2017.
- */
+
 public class MyScanner {
     private int peopleCount;
     private int maxAmount;
 
     public MyScanner(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введіть кількість відвідувачів бібліотеки:");
+        System.out.print("Введите количество посетителей библиотеки:");
         peopleCount = scanner.nextInt();
         scanner.nextLine();
-        System.out.print("Введіть вмістимість бібліотеки:");
+        System.out.print("Введите вместительность библиотеки:");
         maxAmount = scanner.nextInt();
         scanner.nextLine();
     }

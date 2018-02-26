@@ -1,11 +1,9 @@
-package ua.goit.java8.module8.libraries;
+package files.HW.HW8.libraries;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
-/**
- * Created by Taras on 06.09.2017.
- */
+
 public class Library1{
     private int peopleCount;
     private int maxAmount;
@@ -33,23 +31,23 @@ public class Library1{
 
         @Override
         public void run() {
-            System.out.printf("Людина №%d підійшла до входу в бібліотеку.\n", peopleNumber);
+            System.out.printf("Человек №%d подешёл ко входу в библиотеку.\n", peopleNumber);
 
             try {
 
                 if (semaphore.availablePermits() == 0){
-                    System.out.printf("Людина №%d чекає біля входу у бібліотеку.\n", peopleNumber);
+                    System.out.printf("Человек №%d ждет возле входа в библиотеку.\n", peopleNumber);
                 }
                 semaphore.acquire();
 
-                System.out.printf("Людина №%d зайшла у бібліотеку.\n", peopleNumber);
+                System.out.printf("Человек №%d зашёл в библиотеку.\n", peopleNumber);
 
-                System.out.printf("Людина №%d читає книгу.\n", peopleNumber);
+                System.out.printf("Человек №%d читает книгу.\n", peopleNumber);
                 Random rand = new Random();
-                Thread.sleep(rand.nextInt(4001) + 1000);       //читаєм книгу
+                Thread.sleep(rand.nextInt(4001) + 1000);
 
                 semaphore.release();
-                System.out.printf("Людина №%d вийшла з бібліотеки.\n", peopleNumber);
+                System.out.printf("Человек №%d вышел из библиотеки.\n", peopleNumber);
             } catch (InterruptedException e) {
             }
 

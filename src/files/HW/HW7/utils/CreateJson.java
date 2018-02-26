@@ -1,8 +1,9 @@
-package ua.goit.java8.module7.utils;
+package files.HW.HW7.utils;
 
-import ua.goit.java8.module7.Client;
-import ua.goit.java8.module7.Fruit;
+
 import com.alibaba.fastjson.JSON;
+import files.HW.HW7.Client;
+import files.HW.HW7.Fruit;
 
 import java.io.IOException;
 import java.util.ArrayList;

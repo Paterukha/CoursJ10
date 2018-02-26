@@ -1,13 +1,11 @@
-package ua.goit.java8.module82.task3;
+package files.HW.HW82.task3;
 
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 
-/**
- * Created by Taras on 16.09.2017.
- */
+
 public class Main extends Application {
 
 

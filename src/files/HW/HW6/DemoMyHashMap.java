@@ -1,10 +1,8 @@
-package ua.goit.java8.module6;
+package files.HW.HW6;
 
-import ua.goit.java8.module6.collections.MyHashMap;
 
-/**
- * Created by t.oleksiv on 22/08/2017.
- */
+import files.HW.HW6.collections.MyHashMap;
+
 public class DemoMyHashMap {
     private MyHashMap<String,String> myHashMap= new MyHashMap<>();
 
@@ -13,17 +11,17 @@ public class DemoMyHashMap {
     }
 
     private void showDemo(){
-        myHashMap.put("taras","oleksiv");
-        myHashMap.put("taras1","oleksiv1");
-        myHashMap.put("taras2","oleksiv2");
+        myHashMap.put("Yana","Paterukha");
+        myHashMap.put("Yana1","Paterukha1");
+        myHashMap.put("Yana2","Paterukha2");
         showInfo();
 
-        String key = "taras1";
+        String key = "Yana1";
         System.out.println("Get element by key \"" + key + "\":");;
         System.out.println("Element with key \"" + key + "\" has value \"" + myHashMap.get(key) + "\"");
         System.out.println();
 
-        key = "taras";
+        key = "Yana";
         System.out.println("Remove element with key \"" + key + "\" from MyHashMap:");
         myHashMap.remove(key);
         showInfo();

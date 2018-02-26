@@ -1,12 +1,10 @@
-package ua.goit.java8.module82.textRedactor.task1and2;
+package files.HW.HW82.textRedactor.task1and2;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 
-/**
- * Created by Taras on 17.09.2017.
- */
+
 public class Main extends Application {
 
 

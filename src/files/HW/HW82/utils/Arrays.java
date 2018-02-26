@@ -1,13 +1,11 @@
-package ua.goit.java8.module82.utils;
+package files.HW.HW82.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Taras on 15.09.2017.
- */
+
 public class Arrays {
-    // заповнення ArrayList - працює дуже довго
+
     public ArrayList<Integer> getArrayList(int size) {
         System.out.println("Started filling ArrayList...");
         final ArrayList<Integer> result = new ArrayList<>(size);
@@ -19,7 +17,7 @@ public class Arrays {
     }
 
 
-    // заповнення масиву багатьма потоками - працює довше
+
     public int[] getArrayMultiThread(int size) throws InterruptedException {
         int coreCount = Runtime.getRuntime().availableProcessors();
         int length = size / coreCount;
@@ -48,7 +46,7 @@ public class Arrays {
         return result;
     }
 
-    // заповнення масиву одним потоком - працює швидше
+
     public int[] getArraySingleThread(int size){
         System.out.println("Started filling Array...");
         int[] result = new int[size];
@@ -59,7 +57,7 @@ public class Arrays {
         return result;
     }
 
-    // метод підрахунки суми в масиві з лівою та правою межею
+
     private double getSum(int[] array, int left, int right) {
         double sum = 0;
         for(int i = left; i < right; i++)
@@ -67,8 +65,7 @@ public class Arrays {
         return sum;
     }
 
-    // метод підрахунку суми в масиві розбиттям на паралельні потоки
-    // при цьому масив ділиться на стільки частин, скільки вказано потоків
+
     public double getMultipleThreadsSum(int[] array, int count) throws InterruptedException {
         List<Thread> threads = new ArrayList<>(count);
         final double[] sums = new double[count];

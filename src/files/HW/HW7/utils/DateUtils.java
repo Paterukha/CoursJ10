@@ -1,8 +1,6 @@
-package ua.goit.java8.module7.utils;
+package files.HW.HW7.utils;
 
-/**
- * Created by t.oleksiv on 04/09/2017.
- */
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

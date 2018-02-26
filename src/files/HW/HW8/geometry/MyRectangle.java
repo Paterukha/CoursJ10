@@ -1,14 +1,12 @@
-package ua.goit.java8.module8.geometry;
+package files.HW.HW8.geometry;
 
+import files.HW.HW8.TaskGeometry1;
 import javafx.application.Platform;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import ua.goit.java8.module8.TaskGeometry1;
 
-/**
- * Created by t.oleksiv on 07/09/2017.
- */
+
 public class MyRectangle extends Rectangle implements Runnable{
     private Pane root;
     private double xStart;
@@ -33,7 +31,7 @@ public class MyRectangle extends Rectangle implements Runnable{
     public void run() {
         int count = 0;
 
-        // лічильник потоку налаштований так, щоб потік завершив роботу через 40 секунд
+
         while(count < 400) {
             final double x = this.getTranslateX();
             final double y = this.getTranslateY();
@@ -63,7 +61,7 @@ public class MyRectangle extends Rectangle implements Runnable{
         }
     }
 
-    // перевірка чи прямокутник досягнув межі сцени
+
     private void checkType(){
         if (xStart+this.getTranslateX()+this.getWidth() + 20 >= TaskGeometry1.WIDTH || xStart+this.getTranslateX() <= 0){
             typeX = !typeX;

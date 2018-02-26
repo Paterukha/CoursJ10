@@ -1,10 +1,8 @@
-package ua.goit.java8.module6.collections;
+package files.HW.HW6.collections;
 
 import java.util.Collection;
 
-/**
- * Created by t.oleksiv on 18/08/2017.
- */
+
 public class MyArrayList<T> {
     private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
     private Object[] elementData;
@@ -19,7 +17,7 @@ public class MyArrayList<T> {
         this.size = 0;
     }
 
-    // add element to the end
+
     public void add(T element){
         Object[] oldElementData = getElementData();
         Object[] newElementData = new Object[oldElementData.length + 1];
@@ -29,7 +27,7 @@ public class MyArrayList<T> {
         size++;
     }
 
-    // remove element
+
     public void remove(int index){
         if (index < size){
             Object[] oldElementData = getElementData();
@@ -43,12 +41,12 @@ public class MyArrayList<T> {
         }
     }
 
-    // clear collection
+
     public void clear(){
         initializeEmpty();
     }
 
-    // print all elements of ArrayList
+
     public void print() {
         for(Object element : elementData) {
             System.out.print("" + element + " ");

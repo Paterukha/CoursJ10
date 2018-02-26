@@ -1,8 +1,6 @@
-package ua.goit.java8.module7;
+package files.HW.HW7;
 
-/**
- * Created by t.oleksiv on 04/09/2017.
- */
+
 public class Fruit {
     public enum Type {banana, apple, pear, plum, peach, apricot, mellon, watermelon, grapefruit, tangerine};
     private Type type;

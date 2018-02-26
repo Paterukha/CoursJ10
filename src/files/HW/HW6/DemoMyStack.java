@@ -1,10 +1,8 @@
-package ua.goit.java8.module6;
+package files.HW.HW6;
 
-import ua.goit.java8.module6.collections.MyStack;
 
-/**
- * Created by Taras on 18.08.2017.
- */
+import files.HW.HW6.collections.MyStack;
+
 public class DemoMyStack {
     private MyStack<Float> myStack = new MyStack<>();
 

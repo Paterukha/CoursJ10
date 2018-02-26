@@ -1,10 +1,9 @@
-package ua.goit.java8.module6;
+package files.HW.HW6;
 
-import ua.goit.java8.module6.collections.MyArrayList;
 
-/**
- * Created by t.oleksiv on 18/08/2017.
- */
+import files.HW.HW6.collections.MyArrayList;
+
+
 public class DemoMyArrayList {
     private MyArrayList<String> myArrayList = new MyArrayList<>();
 
@@ -15,10 +14,10 @@ public class DemoMyArrayList {
     private void showDemo() {
 
         System.out.println("Add elements to MyArrayList:");
-        myArrayList.add("taras1");
-        myArrayList.add("taras2");
-        myArrayList.add("taras0");
-        myArrayList.add("taras1");
+        myArrayList.add("Yana1");
+        myArrayList.add("Yana2");
+        myArrayList.add("Yana0");
+        myArrayList.add("Yana1");
         showInfo();
 
         int index = 2;

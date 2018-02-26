@@ -1,11 +1,9 @@
-package ua.goit.java8.module82.utils;
+package files.HW.HW82.utils;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Created by Taras on 16.09.2017.
- */
+
 
 public class Images {
     private static final ArrayList<String> images = new ArrayList<>(50);
@@ -72,7 +70,7 @@ public class Images {
         return images;
     }
 
-    // створення масиву рендомних лінків
+
     public ArrayList<String> getRandomImages(){
         Random random = new Random();
         ArrayList<String> result = new ArrayList<>(25);

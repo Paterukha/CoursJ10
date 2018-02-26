@@ -1,4 +1,4 @@
-package ua.goit.java8.module6.collections;
+package files.HW.HW6.collections;
 
 public class Node<T> {
     public T item;

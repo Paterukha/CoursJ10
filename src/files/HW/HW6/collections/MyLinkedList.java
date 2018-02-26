@@ -1,21 +1,19 @@
-package ua.goit.java8.module6.collections;
+package files.HW.HW6.collections;
 
-/**
- * Created by t.oleksiv on 18/08/2017.
- */
+
 public class MyLinkedList<T> {
     private Node<T> first;
     private Node<T> last;
     private int size;
 
-    // constructor
+
     public MyLinkedList(){
         first = new Node<T>(null, null, null);
         last = first;
         size = 0;
     }
 
-    // add element
+
     public void add(T item) {
         Node<T> node = new Node<>(item, null, last);
         last.next = node;
@@ -24,7 +22,7 @@ public class MyLinkedList<T> {
         size++;
     }
 
-    // print list
+
     public void print() {
         Node<T> iterator = first;
         if (iterator == null) return;
@@ -36,7 +34,7 @@ public class MyLinkedList<T> {
         System.out.println();
     }
 
-    // remove element by index
+
     public void remove(int index){
         Node<T> nodeToRemove = getNode(index);
         if (nodeToRemove != first){
@@ -53,7 +51,7 @@ public class MyLinkedList<T> {
         size--;
     }
 
-    // clear collection
+
     public void clear(){
         int originalSize = size;
         for (int i = 0; i < originalSize; i++){
@@ -61,7 +59,7 @@ public class MyLinkedList<T> {
         }
     }
 
-    // get node by index
+
     public Node<T> getNode(int index){
         if (index < size) {
             Node<T> iterator = first;
@@ -76,12 +74,12 @@ public class MyLinkedList<T> {
         }
     }
 
-    // get element by index
+
     public T get(int index){
         return getNode(index).item;
     }
 
-    // get size
+
     public int size(){
         return size;
     }

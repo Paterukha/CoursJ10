@@ -1,22 +1,22 @@
-package ua.goit.java8.module82.task1;
+package files.HW.HW82.task1;
 
-import ua.goit.java8.module82.utils.Operations;
+
+
+import files.HW.HW82.utils.Operations;
 
 import java.util.Scanner;
 
-/**
- * Created by t.oleksiv on 14/09/2017.
- */
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введіть число А: ");
+        System.out.print("Введите число А: ");
         double a = sc.nextDouble();
         sc.nextLine();
-        System.out.print("Введіть число B: ");
+        System.out.print("Введите число B: ");
         double b = sc.nextDouble();
         sc.nextLine();
-        System.out.print("Введіть символ однієї з наступних операцій ( \"+\" ; \"-\" ; \"*\" ; \"/\" ; \"%\" ; \"==\" ; \"<\" ; \">\" ): ");
+        System.out.print("Введите символ одной из следующих операций ( \"+\" ; \"-\" ; \"*\" ; \"/\" ; \"%\" ; \"==\" ; \"<\" ; \">\" ): ");
         String operation = sc.nextLine();
         Operations operationCurrent = new Operations();
 
@@ -27,7 +27,7 @@ public class Main {
             OperationBoolean operationBoolean = new OperationBoolean(operation, a, b);
             System.out.println("Результат (" + a + " " + operation + " " + b + " ) = " + operationCurrent.getResult(operationBoolean));
         } else {
-            System.out.println("Введено недопустимий символ операції. Продовження роботи програми неможливе.");
+            System.out.println("Введён недопустимый символ операции. Продолжение работы программы невозможно.");
         }
     }
 }

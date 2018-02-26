@@ -1,11 +1,9 @@
-package ua.goit.java8.module8;
+package files.HW.HW8;
 
 
-import ua.goit.java8.module8.libraries.Library2;
+import files.HW.HW8.libraries.Library2;
 
-/**
- * Created by Taras on 06.09.2017.
- */
+
 public class TaskLibrary2 {
     private static int peopleCount;
     private static int maxAmount;

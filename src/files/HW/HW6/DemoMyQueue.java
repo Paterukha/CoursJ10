@@ -1,10 +1,8 @@
-package ua.goit.java8.module6;
+package files.HW.HW6;
 
-import ua.goit.java8.module6.collections.MyQueue;
 
-/**
- * Created by Taras on 18.08.2017.
- */
+import files.HW.HW6.collections.MyQueue;
+
 public class DemoMyQueue {
     private MyQueue<String> myQueue= new MyQueue<>();
 

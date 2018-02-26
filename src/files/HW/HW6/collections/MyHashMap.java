@@ -1,14 +1,11 @@
-package ua.goit.java8.module6.collections;
+package files.HW.HW6.collections;
 
 
 import java.util.Objects;
 
-/**
- * Created by t.oleksiv on 21/08/2017.
- */
-public class MyHashMap<K,V> {
-    static final int MAXIMUM_CAPACITY = 100;        // limited table size
 
+public class MyHashMap<K,V> {
+    static final int MAXIMUM_CAPACITY = 100;
     private NodeMap<K,V>[] table;
     private int size;
 
@@ -61,9 +58,7 @@ public class MyHashMap<K,V> {
         return null;
     }
 
-    // methods
 
-    // print hashmap
     public void print() {
         for (int i = 0; i < table.length; i++){
             NodeMap<K,V> iterator = table[i];
@@ -76,7 +71,7 @@ public class MyHashMap<K,V> {
         System.out.println();
     }
 
-    // add <key,value>
+
     public void put(K key, V value){
         int index;
         int hash;
@@ -85,7 +80,7 @@ public class MyHashMap<K,V> {
         addEntry(hash,key,value,index);
     }
 
-    // remove element by key
+
     public void remove(K key){
         int index;
         int hash;
@@ -110,7 +105,7 @@ public class MyHashMap<K,V> {
         }
     }
 
-    // get element by key
+
     public V get(K key){
         V value = null;
         int index;
@@ -161,7 +156,7 @@ public class MyHashMap<K,V> {
         return nodeMap;
     }
 
-    // get size
+
     public int size(){
         return size;
     }

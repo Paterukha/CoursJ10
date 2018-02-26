@@ -1,8 +1,6 @@
-package ua.goit.java8.module7;
+package files.HW.HW7;
 
-/**
- * Created by t.oleksiv on 05/09/2017.
- */
+
 public class Client {
     private String name;
     private Fruit.Type fruitType;

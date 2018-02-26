@@ -1,8 +1,9 @@
-package ua.goit.java8.module7;
+package files.HW.HW7;
 
 import com.alibaba.fastjson.JSON;
-import ua.goit.java8.module7.utils.DateUtils;
-import ua.goit.java8.module7.utils.FileUtils;
+import files.HW.HW7.utils.DateUtils;
+import files.HW.HW7.utils.FileUtils;
+
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,9 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 
-/**
- * Created by Taras on 04.09.2017.
- */
+
 public class TradingShop {
     private List<Fruit> fruits = new ArrayList<>();
     private List<Client> clients = new ArrayList<>();

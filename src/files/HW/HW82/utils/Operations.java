@@ -1,14 +1,14 @@
-package ua.goit.java8.module82.utils;
+package files.HW.HW82.utils;
 
-import ua.goit.java8.module82.task1.OperationBoolean;
-import ua.goit.java8.module82.task1.OperationDouble;
+
+import files.HW.HW82.task1.OperationBoolean;
+import files.HW.HW82.task1.OperationDouble;
+
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 
-/**
- * Created by t.oleksiv on 14/09/2017.
- */
+
 public class Operations {
     public double getResult(OperationDouble operationDouble){
         FutureTask<Double> futureTask = new FutureTask<Double>(operationDouble);

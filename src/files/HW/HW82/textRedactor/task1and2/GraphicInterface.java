@@ -1,5 +1,7 @@
-package ua.goit.java8.module82.textRedactor.task1and2;
+package files.HW.HW82.textRedactor.task1and2;
 
+import files.HW.HW82.utils.Fibonacci;
+import files.HW.HW82.utils.FileUtils;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -9,14 +11,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import ua.goit.java8.module82.utils.Fibonacci;
-import ua.goit.java8.module82.utils.FileUtils;
 
 import java.io.IOException;
 
-/**
- * Created by Taras on 17.09.2017.
- */
 public class GraphicInterface {
 
     private Stage primaryStage;
@@ -39,8 +36,7 @@ public class GraphicInterface {
         FileUtils fileUtils = new FileUtils();
         Fibonacci fibonacciUtils = new Fibonacci();
 
-        // текстове поле для вводу шляху до файлу
-        // за замовчуванням ініціюється як робоча директорія + FILE_PATH
+
         TextField filePath = new TextField();
         filePath.setTranslateX(10);
         filePath.setTranslateY(10);
@@ -48,28 +44,28 @@ public class GraphicInterface {
         filePath.setText(fileUtils.getApplicationPath() + "\\" + FILE_PATH);
         root.getChildren().add(filePath);
 
-        // текстове поле для вводу порядкового номеру числа Фібоначчі
+
         TextField textNumber = new TextField();
         textNumber.setTranslateX(700);
         textNumber.setTranslateY(10);
         textNumber.setPrefWidth(70);
         root.getChildren().add(textNumber);
 
-        // ерор лейбл в якому виводиться інфа про відсутність вказаного файлу
+
         Label errorLabel = new Label();
         errorLabel.setTranslateX(20);
         errorLabel.setTranslateY(40);
         errorLabel.setTextFill(Color.RED);
         root.getChildren().add(errorLabel);
 
-        // ерор лейбл в якому виводиться результат перевірки чи введений текст є числом
+
         Label errorNumber = new Label();
         errorNumber.setTranslateX(600);
         errorNumber.setTranslateY(40);
         errorNumber.setTextFill(Color.RED);
         root.getChildren().add(errorNumber);
 
-        // вікно в яке виводиться вміст файлу
+
         TextArea fileText = new TextArea();
         fileText.setTranslateX(10);
         fileText.setTranslateY(70);
@@ -77,7 +73,7 @@ public class GraphicInterface {
         fileText.setPrefHeight(700);
         root.getChildren().add(fileText);
 
-        // кнопка завантаження файлу
+
         Button load = new Button();
         load.setTranslateX(350);
         load.setTranslateY(10);
@@ -98,7 +94,7 @@ public class GraphicInterface {
         });
         root.getChildren().add(load);
 
-        // кнопка збереження файлу
+
         Button save = new Button();
         save.setTranslateX(400);
         save.setTranslateY(10);
@@ -120,7 +116,7 @@ public class GraphicInterface {
         });
         root.getChildren().add(save);
 
-        // кнопка пошуку числа Фібоначчі на запису послідовності у файл
+
         Button fibonacci = new Button();
         fibonacci.setTranslateX(780);
         fibonacci.setTranslateY(10);
